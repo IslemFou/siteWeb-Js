@@ -106,3 +106,18 @@ play.addEventListener("click", autoPlayCarr);
 pause.addEventListener("click", pauseCarr);
 back.addEventListener("click", precCarr);
 next.addEventListener("click", nextCarr);
+
+
+
+//--------------- parcourir les nav-link et ajouter une classe nabColor sur l'elément actif
+
+const URL = window.location.href;
+
+  navMenu = document.querySelectorAll(".nav-link"); // NodeList(6) [a.nav-link, a.nav-link, a.nav-link, a.nav-link, a.nav-link, a.nav-link]
+
+
+for (let i = 0; i < navMenu.length; i++) {
+    if (navMenu[i].getAttribute("href") === URL) {
+        navMenu[i].classList.add("navColor");
+    }
+}
